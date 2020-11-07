@@ -11,7 +11,7 @@ class SimpleApp {
   oneRDD.count
   val otherRDD = oneRDD.map(_ * 2)
   val result = otherRDD.collect
-  for (v <- result) println(v)
-  val sum = oneRDD.reduce(_ + _)
-  print(sum)
+  // for (v <- result) println(v)
+  def sumAr: Int = oneRDD.reduce(_ + _)
+
 }
